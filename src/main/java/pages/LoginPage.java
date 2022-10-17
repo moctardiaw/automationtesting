@@ -205,11 +205,17 @@ public class LoginPage {
      * @param currentpassword
      * @return LoginPage
      */
-    public LoginPage EnterCourantMotdepasse(String currentpassword){
+    public LoginPage EnterCourantMotdepasse(String currentpassword) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait((WebDriver) navigate, Duration.ofSeconds(TIMEOUT));
         WebElement InputCourantMotdePasse = wait.until(ExpectedConditions.visibilityOfElementLocated(InputCourantMotdePasseLocator));
         InputCourantMotdePasse.clear();
-        InputCourantMotdePasse.sendKeys(currentpassword);
+
+        char[] charArray = currentpassword.toCharArray();
+        for(int i=0; i<charArray.length;i++){
+            InputCourantMotdePasse.sendKeys(""+charArray[i]);
+            System.out.println(charArray[i]+toString());
+            Thread.sleep(1000);
+        }
         return this;
     }
 
@@ -218,11 +224,19 @@ public class LoginPage {
      * @param newpassword
      * @return LoginPage
      */
-    public LoginPage EnterNouveauMotdepasse(String newpassword){
+    public LoginPage EnterNouveauMotdepasse(String newpassword) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait((WebDriver) navigate, Duration.ofSeconds(TIMEOUT));
         WebElement InputNouveauMotdePasse = wait.until(ExpectedConditions.visibilityOfElementLocated(InputNouveauMotdePasseLocator));
         InputNouveauMotdePasse.clear();
-        InputNouveauMotdePasse.sendKeys(newpassword);
+
+
+        char[] charArray = newpassword.toCharArray();
+        for(int i=0; i<charArray.length;i++){
+            InputNouveauMotdePasse.sendKeys(""+charArray[i]);
+            System.out.println(charArray[i]+toString());
+            Thread.sleep(1000);
+        }
+
         return this;
     }
 
@@ -231,11 +245,18 @@ public class LoginPage {
      * @param confirmpass
      * @return LoginPage
      */
-    public LoginPage EnterConfirmeMotdepasse(String confirmpass){
+    public LoginPage EnterConfirmeMotdepasse(String confirmpass) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait((WebDriver) navigate, Duration.ofSeconds(TIMEOUT));
         WebElement InputConfirmeMotdepasse = wait.until(ExpectedConditions.visibilityOfElementLocated(InputConfirmeMotdepasseLocator));
         InputConfirmeMotdepasse.clear();
-        InputConfirmeMotdepasse.sendKeys(confirmpass);
+
+        char[] charArray = confirmpass.toCharArray();
+        for(int i=0; i<charArray.length;i++){
+            InputConfirmeMotdepasse.sendKeys(""+charArray[i]);
+            System.out.println(charArray[i]+toString());
+            Thread.sleep(1000);
+        }
+
         return this;
     }
 

@@ -104,7 +104,8 @@ public class LoginStepdefs  {
      * @param newpassword
      */
     @And("saisir  le nouveau {string}")
-    public void saisirLeNouveauMotdepassenouveau(String newpassword) {
+    public void saisirLeNouveauMotdepassenouveau(String newpassword) throws InterruptedException {
+
         loginPage.EnterNouveauMotdepasse(newpassword);
     }
 
@@ -113,11 +114,21 @@ public class LoginStepdefs  {
      * @param confirmpass
      */
     @And("saisir le {string}")
-    public void saisirLeMotdepasseconfirme(String confirmpass) {
+    public void saisirLeMotdepasseconfirme(String confirmpass) throws InterruptedException {
+
         loginPage.EnterConfirmeMotdepasse(confirmpass);
     }
+
+    @And("saisir un {string} et un {string}")
+    public void saisirUnMotdepasseactuelEtUnMotdepassenouveau(String currentpass,String nouveaupass) throws InterruptedException {
+
+        loginPage.EnterCourantMotdepasse(currentpass);
+        loginPage.EnterNouveauMotdepasse(nouveaupass);
+    }
+
     @And("cliquer sur le bouton SAVE CHANGE")
     public void cliquerSurLeBoutonSAVECHANGE() {
+
         loginPage.ClickSaveChanges();
     }
 
@@ -264,4 +275,9 @@ public class LoginStepdefs  {
     public void urlNeContientPasLesValeursDeFiltresFilter(String filter) {
         loginPage.GetNotCurrentUrl(filter);
     }
+
+
+
+
+
 }
