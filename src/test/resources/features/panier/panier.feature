@@ -1,6 +1,6 @@
 @panier
 Feature: Ajout d'articles au panier
-  @increment @passant
+  @increment @passant @TEST_TEAM4-49 @Team4TNR
   Scenario Outline: Verifier l'incrementation du nombre d'articles dans le panier
     Given le navigateur '<navigator>' est ouvert
     And  je suis sur la home page
@@ -28,7 +28,7 @@ Feature: Ajout d'articles au panier
       |firefox  |1 Item   |160      |selenium  |
 
 
-  @decrement @passant
+  @decrement @passant @TEST_TEAM4-48 @Team4TNR
   Scenario Outline: Verifier la décrementation du nombre d'articles dans le panier
     Given le navigateur '<navigator>' est ouvert
     And  je suis sur la home page

@@ -1,6 +1,6 @@
 @test
 Feature: Tester la fonctionnalité de logout
-  @logout
+  @logout @TEST_TEAM4-47 @Team4TNR
   Scenario Outline: Vérifier que la déconnexion est réussie après être connecté
     Given le navigateur '<navigator>' est ouvert
     And  je suis sur la home page

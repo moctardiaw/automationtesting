@@ -14,7 +14,7 @@ import java.security.NoSuchAlgorithmException;
 @CucumberOptions(
         //dryRun = true,
         features = "src/test/resources/features",
-        glue = {"steps/login"},
+        glue = {"steps/login","steps/register"},
         //tags={"@TEST_TEAM4-21","@Team4","@REQ_TEAM4-2"},
         //tags={"@totest"},
         plugin = {"pretty","html:target/cucumberreports","json:target/cucumber.json"}
@@ -27,10 +27,10 @@ public class Runner {
     public static void tearDown() throws NoSuchAlgorithmException, KeyStoreException, IOException, InterruptedException, KeyManagementException {
 
         //import->JIRA
-        //ImportResultsToXray res = new ImportResultsToXray();
-        //res.RemonteResultats();
+        ImportResultsToXray res = new ImportResultsToXray();
+        res.RemonteResultats();
 
-        //System.out.println("IMPORT to Xray....");
+        System.out.println("IMPORT to Xray....");
 
     }
 }

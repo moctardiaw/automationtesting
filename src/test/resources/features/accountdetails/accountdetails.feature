@@ -1,6 +1,6 @@
-
+@REQ_TEAM4-7
   Feature: Visualisation des informations du compte
-    @accountdetails
+    @accountdetails @TEST_TEAM4-30 @Team4TNR
     Scenario Outline: Vérifier que les informations du compte sont tous valides et que le mot de passe de confirmation est le même que celui du nouveau mot de passe
       Given le navigateur '<navigator>' est ouvert
       And  je suis sur la home page
@@ -21,7 +21,7 @@
         |edge|md.team4.reg13.success@yopmail.com|Te$t@2022&*4|HADJ|Abir|Te$t@2022&*4|F$R9a4r|F$R9a4r|
         |firefox|md.team4.reg14.success@yopmail.com|Te$t@2022&*4|HADJ|Abir|Te$t@2022&*4|F$R9a4r|F$R9a4r|
 
-    @accountdetailsencoursdedev
+    @accountdetailsencoursdedev  @TEST_TEAM4-46 @Team4TNR
     Scenario Outline: Vérifier que le mot de passe actuel n'est pas valide
       Given le navigateur '<navigator>' est ouvert
       And  je suis sur la home page

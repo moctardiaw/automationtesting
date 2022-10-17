@@ -16,7 +16,7 @@ Feature: Authentification d’un client
       |edge|md.team4.success@yopmail.com     |Te$t@2022&*4        |
       |firefox|md.team4.success@yopmail.com     |Te$t@2022&*4        |
 
-  @recette
+  @recette @TEST_TEAM4-32 @Team4TNR
   Scenario Outline: Vérifier que la connexion échoue avec un email invalide et un mot de passe invalide
       Given le navigateur '<navigator>' est ouvert
       And  je suis sur la home page
@@ -30,7 +30,7 @@ Feature: Authentification d’un client
       |chrome|md.team4.failed@yopmail.com     |Te$t@2022        |
       |edge|md.team4.failed@yopmail.com     |Te$t@2022        |
       |firefox|md.team4.failed@yopmail.com     |Te$t@2022        |
-  @recette
+  @recette @TEST_TEAM4-42 @Team4TNR
   Scenario Outline: Vérifier que la connexion est échoue avec un email valide et un mot de passe vide
     Given le navigateur '<navigator>' est ouvert
     And  je suis sur la home page
@@ -45,7 +45,7 @@ Feature: Authentification d’un client
       |edge|md.team4.success@yopmail.com     |       |
       |firefox|md.team4.success@yopmail.com     |        |
 
-  @recette
+  @recette @TEST_TEAM4-43 @Team4TNR
   Scenario Outline: Vérifier que la connexion est échoue avec un email vide et un mot de passe valide
     Given le navigateur '<navigator>' est ouvert
     And  je suis sur la home page
@@ -60,7 +60,7 @@ Feature: Authentification d’un client
       |edge|     |Te$t@2022       |
       |firefox|     |Te$t@2022        |
 
-  @recette
+  @recette  @TEST_TEAM4-44 @Team4TNR
   Scenario Outline: Vérifier que la connexion est échoue avec un email vide et un mot de passe vide
     Given le navigateur '<navigator>' est ouvert
     And  je suis sur la home page
